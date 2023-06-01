@@ -3,81 +3,87 @@
     margin: 0;
     box-sizing: border-box;
 }
-.solar {
-    /* background-image: url('../images/bgPampa.jpg'); */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/bgPampa.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: contain;
-    width: 98.7vw;
-    height: 80vh;
-    font-size: 2.7rem;
+
+.inicio {
+    position: relative;
+    height: 170vh;
+    background-color: #1b1b1b;
+}
+
+.titulo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.titulo-principal {
+    font-size: 3.5rem;
     font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #fff;
 }
-.titulo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    font-family: 'Times New Roman', Times, serif;
-    height: 80vh;
-    justify-content: center;
+
+.slide1,
+.slide2,
+.slide3 {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
 
 }
-section {
-    background-color: #1d1d1d;
-    height: 180vh;
-    width: 98.7vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.info {
-    width: 75vw;
-    height: 30vh;
-    border-radius: 10px;
-    margin-top: 2rem;
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
     color: #fff;
+}
+.segundo {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.infoPaneles {
-    margin: 0.3rem;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.1rem;
-}
-.Fotos {
-    margin-top:2rem ;
-    width: 98vw;
+
+.contenido {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  
+    align-items: center;
 }
-.inversor {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    margin-left: 2rem;
-    overflow: hidden;
-  transition: transform 0.3s;
+
+.imagen {
+    flex: 1;
 }
-.inversor:hover {
-    transform: scale(1.1)
+
+.imagen img {
+    width: 20rem;
+    height: auto;
+    transition: transform 0.3s ease;
 }
-.inv {
-    display: flex;
-    flex-direction: column;
+
+.texto {
+    flex: 1;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
 }
-.parrafo1 {
-    font-size: 0.9rem;
-    margin: 1rem;
-    color: #fff;
-    width: 15rem;
+
+.texto:hover {
+    background-color: #e9e9e9;
+}
+
+.imagen:hover img {
+    transform: scale(1.1);
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Navbar.css'
 import logo from '../images/logo.png'
+import {Link as Anchor} from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -9,8 +10,8 @@ const Navbar = () => {
           <img src={logo} alt=""/>
         </div>
         <ul class="navbar-list">
-          <li class="navbar-item"><a href="#inicio">Inicio</a></li>
-          <li class="navbar-item"><a href="#productos">Productos</a></li>
+          <li class="navbar-item"><Anchor to="/">Home</Anchor></li>
+          <li class="navbar-item"><Anchor to="/productos">Productos</Anchor></li>
           <li class="navbar-item"><a href="#instalacion">Instalación</a></li>
           <li class="navbar-item"><a href="#calculador">Trabajos Realizados</a></li>
           <li class="navbar-item"><a href="#acerca-de">Acerca de</a></li>

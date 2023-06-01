@@ -1,0 +1,22 @@
+.square-img {
+    width: 20rem;
+    height: 20rem;
+    margin-left: 1rem;
+}
+.square-img-container {
+    position: relative;
+    width: 100%;
+  }
+  .custom-modal {
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-left: 6rem;
+  }
+  
+  .custom-modal .modal-dialog {
+    max-width: 100%;
+  }
+  
+  
