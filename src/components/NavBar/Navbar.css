@@ -1,45 +1,137 @@
-*{ 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #2b2b2b;
+  padding: 10px;
+}
+
+.navbar-logo {
+  margin-right: auto;
+}
+
+img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar-item {
+  margin-right: 10px;
+}
+
+.navbar-item a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0.9rem;
+}
+
+.navbar-company {
+  margin-left: auto;
+  color: #fff;
+}
+
+/* Media query para ajustar el diseño en el rango de 320px a 435px de ancho */
+
+@media (min-width: 320px) and (max-width: 424px) {
+  @media (min-width: 320px) and (max-width: 424px) {
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+  
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #2b2b2b;
+      padding: 10px;
+    }
+  
+    .navbar-logo {
+      margin-right: 0; /* Modificado */
+      margin-bottom: 10px; /* Añadido */
+    }
+  
+    img {
+      width: 4rem; /* Modificado */
+      height: 4rem; /* Modificado */
+    }
+  
+    .navbar-list {
+      flex-direction: column; /* Añadido */
+      align-items: center; /* Añadido */
+    }
+  
+    .navbar-item {
+      margin-right: 0; /* Modificado */
+      margin-bottom: 10px; /* Añadido */
+    }
+  
+    .navbar-item a {
+      margin: 0.5rem; /* Modificado */
+    }
+  
+    .navbar-company {
+      margin-left: 0; /* Modificado */
+      margin-top: 10px; /* Añadido */
+    }
+  }
+  
+}
+@media (min-width: 425px) and (max-width: 769px) {
+  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-.navbar {
+  }
+
+  .navbar {
     display: flex;
     align-items: center;
     background-color: #2b2b2b;
     padding: 10px;
   }
 
-  
   .navbar-logo {
     margin-right: auto;
   }
+
   img {
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
   }
-  
+
   .navbar-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    flex-wrap: wrap;
   }
-  
+
   .navbar-item {
     margin-right: 10px;
   }
-  
+
   .navbar-item a {
-    color: #fff;;
-    text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin: 0.9rem;
+    margin: 0.5rem;
   }
-  
+
   .navbar-company {
     margin-left: auto;
   }
-  
+}
+
