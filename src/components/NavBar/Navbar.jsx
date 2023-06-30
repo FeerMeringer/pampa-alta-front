@@ -10,7 +10,7 @@ const Navbar = () => {
           <img src="https://i.imgur.com/RgqM0CU.png" alt="logo"/>
         </div>
         <ul class="navbar-list">
-          <li class="navbar-item"><Anchor to="/">Home</Anchor></li>
+          <li class="navbar-item"><Anchor to="/">Inicio</Anchor></li>
           <li class="navbar-item"><Anchor to="/productos">Productos</Anchor></li>
           <li class="navbar-item"><Anchor to="/Instalacion">Instalación</Anchor></li>
           <li class="navbar-item"><Anchor to="/Nosotros">Nosotros</Anchor></li>
