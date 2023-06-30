@@ -22,7 +22,7 @@ export default function Contacto() {
     };
 
     // Enviar la solicitud al servidor
-    axios.post('http://localhost:8000/contacts', formData)
+    axios.post('https://pampa-alta-back.onrender.com/contacts', formData)
       .then((response) => {
         // Mostrar una alerta de éxito
         Swal('¡Éxito!', 'El formulario se ha enviado correctamente.', 'success');
