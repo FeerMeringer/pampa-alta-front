@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .producto {
-  height: 260vh;
+  height: 270vh;
   background-color: #1b1b1b;
 }
 
@@ -31,40 +31,35 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 2rem;
 }
+
 .panel{
-  width: 15rem;
-  height: 15rem;
-  border-radius: 50%;
+  width: 16rem;
+  height: 16rem; 
+  border-radius: 1rem;
 }
-.panel1 {
-  height: 20vh;
-  width: 25vw;
-}
-.Fotos {
-  width: auto;
+.container {
   display: flex;
+  width: 100%;
+  height: 200vh;
+  flex-direction: row;
   justify-content: space-around;
-  margin-top: 5rem;
-}
-.Fotos1 {
-  margin-top: 33rem;
-  display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-content: space-around;
 }
 .parrafo1 {
   font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #fff;
     font-size: 0.9rem;
-    text-align: center;
-    margin:1rem ;
-    margin-right: 7rem;
+    margin-top: 1rem;
+
 }
 @media (min-width: 320px) and (max-width: 425px) {
 
 /* .producto */
 .producto {
-  height: 270vh;
+  height: 610vh;
   width: 100%;
   background-color: #1b1b1b;
 }
@@ -74,35 +69,25 @@
   text-align: center;
 }
 
-.Fotos {
-  display: flex;
-  flex-wrap: wrap;
-}
-.Fotos1 {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 6rem;
-  align-items: center;
-
-}
-.panel1 {
-  display: flex;
-  
-}
 .panel {
-  width: 5rem;
-  height: 7rem;
-  
+  width: 8rem;
+  height: 10rem;
 }
-.parrafo1 {
-  display: none;
+.container {
+  margin-top: 40rem;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 }
 @media (min-width: 425px) and (max-width: 767px) {
   
 /* .producto */
 .producto {
-  height: 200vh;
+  height: 580vh;
   width: 100%;
   background-color: #1b1b1b;
 }
@@ -112,29 +97,13 @@
   text-align: center;
 }
 
-.Fotos {
-  display: flex;
-  flex-wrap: wrap;
-}
-.Fotos1 {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 6rem;
-  align-items: center;
-
-}
-.panel1 {
-  display: flex;
-  
-}
 .panel {
-  width: 7rem;
-  height: 8rem;
+  width: 12rem;
+  height: 10rem;
   
 }
-.parrafo1 {
-  display: none;
-}
+
+
 }
 @media (min-width: 767px) and (max-width: 1024px) {
   .producto {
@@ -147,26 +116,8 @@
     padding: 1rem;
     text-align: center;
   }
-  
-  .Fotos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  .Fotos1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .container {
     margin-top: 2rem;
-  
-  
-  }
-  .panel1 {
-    display: flex;
-    flex-direction: column;
-    height: 40rem;
-    
   }
   .panel {
     width: 7rem;
