@@ -52,7 +52,7 @@ export default function Productos({ product }) {
             </div>
             <div className='box'>
           <img className='panel' src="https://i.imgur.com/1Aj9h1h.jpg" alt="FotoBomba"/>
-            <p className='parrafo1'>Bomba Helicoidal Sumergible Handuro 750W </p>
+            <p className='parrafo1'>Bomba Helicoidal Sumergible Handuro 750W/500W/210W </p>
             </div>
 
         </div>
