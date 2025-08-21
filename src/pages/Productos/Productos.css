@@ -1,133 +1,189 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.producto {
-  height: 270vh;
-  background-color: #1b1b1b;
+/* --- ESTILOS GENERALES --- */
+.productos-section {
+    padding: 3rem 1rem;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    font-family: 'Roboto', sans-serif;
 }
 
-.infoProduct {
-  color: #fff;
-  width: 98vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+.productos-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
 }
 
-.titulo1 {
-  font-size: 2.5rem;
-  padding: 2rem;
-  font-weight: bold;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.productos-titulo-principal {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 1rem;
 }
 
-.titulo2 {
-  font-size: 1.1rem;
-  font-weight: bold;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 2rem;
+.productos-descripcion {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
 }
 
-.panel{
-  width: 16rem;
-  height: 16rem; 
-  border-radius: 1rem;
+/* --- FILTROS POR CATEGORÍA --- */
+.filtros-categoria {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
-.container {
-  display: flex;
-  width: 100%;
-  height: 200vh;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 4rem;
-  align-content: space-around;
-}
-.parrafo1 {
-  font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #fff;
+
+.filtro-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
     font-size: 0.9rem;
-    margin-top: 1rem;
-
-}
-@media (min-width: 320px) and (max-width: 425px) {
-
-/* .producto */
-.producto {
-  height: 610vh;
-  width: 100%;
-  background-color: #1b1b1b;
-}
-.infoProduct {
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
 }
 
-.panel {
-  width: 8rem;
-  height: 10rem;
-}
-.container {
-  margin-top: 40rem;
-}
-.box {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-}
-}
-@media (min-width: 425px) and (max-width: 767px) {
-  
-/* .producto */
-.producto {
-  height: 580vh;
-  width: 100%;
-  background-color: #1b1b1b;
-}
-.infoProduct {
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
+.filtro-btn.active {
+    background-color: #27ae60;
+    color: white;
 }
 
-.panel {
-  width: 12rem;
-  height: 10rem;
-  
+.filtro-btn:hover {
+    background-color: #ddd;
 }
 
-
-}
-@media (min-width: 767px) and (max-width: 1024px) {
-  .producto {
-    height: 320vh;
+/* --- TARJETAS GIRATORIAS (FLIP ON CLICK) --- */
+.flip-card {
+    perspective: 1000px;
     width: 100%;
-    background-color: #1b1b1b;
-  }
-  .infoProduct {
+    height: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: white;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    background: #34495e;
+    color: white;
+}
+
+/* --- CONTENIDO DE LAS TARJETAS --- */
+.producto-imagen {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.flip-card h3 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.flip-card-back h3 {
     color: #fff;
-    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.flip-card-back ul {
+    list-style: none;
+    padding: 0;
     text-align: center;
-  }
-  .container {
-    margin-top: 2rem;
-  }
-  .panel {
-    width: 7rem;
-    height: 8rem;
-    margin-left: 2rem;
-    
-  }
-  .parrafo1 {
-    width: 10rem;
-    text-align: center;
-    margin-right: 2rem;
-  }
+    width: 100%;
+}
+
+.flip-card-back li {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.producto-categoria {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* --- GRILLA DE PRODUCTOS --- */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- BOTÓN DE WHATSAPP --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.img-whatsapp {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.img-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    .productos-titulo-principal {
+        font-size: 2rem;
+    }
+    .productos-descripcion {
+        font-size: 1rem;
+    }
+    .filtros-categoria {
+        gap: 0.3rem;
+    }
+    .flip-card {
+        height: 280px;
+    }
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }

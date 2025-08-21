@@ -4,130 +4,117 @@
     box-sizing: border-box;
 }
 
-.inicio {
-    position: relative;
-    height: 320vh;
-    background-color: #1b1b1b;
+body {
+    background-color: #ffffff;
+    font-family: sans-serif;
+    color: #333333;
 }
 
-.titulo {
+/* --- SECCIÓN PRINCIPAL --- */
+.inicio {
+    padding-bottom: 50px;
+}
+
+/* --- ENCABEZADO PRINCIPAL (HERO) --- */
+.hero-header {
+    position: relative;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.hero-content {
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1;
+    width: 90%;
+    max-width: 800px;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .titulo-principal {
     font-size: 3.5rem;
     font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #fff;
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
+    
 }
 
 .subtitulo {
     font-size: 1.5rem;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #28a745;
     color: #fff;
-}
-
-.slide2,
-.slide3 {
-    width: 100%;
-    height: 540px;
-    object-fit: cover;
-}
-
-.slide1 {
-    object-fit: cover;
-    width: 100%;
-    height: 540px;
-}
-
-
-.carousel-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    color: #fff;
-}
-
-.texto1 {
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.segundo {
+.btn-cta:hover {
+    background-color: #218838;
+}
+
+/* --- SECCIÓN DE RAZONES / BENEFICIOS --- */
+.section-razones {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.titulo-razones {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.lista-razones {
+    list-style: none;
+    padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    gap: 2rem;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.contenido {
+.lista-razones li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    width: 45%;
+    font-family: 'Roboto', sans-serif;
 }
 
-.imagen {
-    flex: 1;
+.icon-list {
+    font-size: 2rem;
+    margin-right: 15px;
+    line-height: 1;
 }
 
-.imagen img {
-    width: 25rem;
-    height: 20rem;
-    transition: transform 0.3s ease;
-    margin-left: 4rem;
+.razones-texto-final {
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
     margin-top: 2rem;
+    line-height: 1.6;
 }
 
-.texto {
-    flex: 1;
-    padding: 1rem;
-    color: #fff;
-}
-
-
-.imagen:hover img {
-    transform: scale(1.1);
-}
-
-.infoPaneles {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 2rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.energiaSolar {
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    margin-top: 9rem;
-}
-
-.queEs {
-    display: flex;
-    justify-content: center;
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.energiaSolarInfo {
-    display: flex;
-    padding: 3rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
-}
-
+/* --- WHATSAPP FLOAT BUTTON --- */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -135,269 +122,46 @@
     z-index: 9999;
 }
 
-.imgWhats {
-    width: 4rem;
-    height: 4rem;
+.img-whatsapp {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
-.energiaSolarList {
-    list-style-type: circle;
-    margin: 1.2rem;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
-    padding: 10px;
-  }
-  
 
-@media (min-width: 320px) and (max-width: 425px) {
-    .inicio {
-        position: relative;
-        height: auto;
-        background-color: #1b1b1b;
-    }
+.img-whatsapp:hover {
+    transform: scale(1.1);
+}
 
-    .titulo {
-        position: static;
-        transform: none;
-        text-align: center;
-        z-index: 1;
-    }
-
+/* --- MEDIA QUERIES --- */
+@media (max-width: 768px) {
     .titulo-principal {
-        font-size: 2.5rem;
-        margin-bottom: 5px;
-    }
-
-    .subtitulo {
-        font-size: 1.2rem;
-    }
-
-    .slide2,
-    .slide3 {
-        height: 320px;
-    }
-
-    .slide1 {
-        height: 320px;
-    }
-
-    .carousel-caption {
-        position: static;
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 10px;
-    }
-
-    .texto1 {
-        font-weight: bold;
-        font-size: 1rem;
-    }
-
-    .segundo {
-        align-items: center;
-
-    }
-
-    .contenido {
-        flex-direction: column;
-    }
-
-    .imagen {
-        flex: none;
-    }
-
-    .imagen img {
-        width: 15rem;
-        height: 12rem;
-        margin: 1rem 0;
-    }
-
-    .texto {
-        padding: 0.5rem;
-    }
-
-    .infoPaneles {
-        font-size: 1rem;
-        margin: 1rem;
-    }
-
-    .energiaSolar {
-        margin-top: 4rem;
-    }
-
-    .queEs {
         font-size: 2rem;
     }
-
-    .energiaSolarInfo {
-        padding: 1.5rem;
+    .subtitulo {
         font-size: 1rem;
     }
-
-    .whatsapp-float {
-        bottom: 10px;
-        right: 10px;
+    .hero-image {
+        height: 350px;
     }
-
-    .imgWhats {
-        width: 3rem;
-        height: 3rem;
-    }
-}
-
-@media (min-width: 425px) and (max-width: 767px) {
-    .inicio {
-        height: 420vh;
+    .lista-razones li {
         width: 100%;
     }
-
-    .titulo {
-        top: 10%;
-        position: static;
-        transform: none;
-        text-align: center;
-        z-index: 1;
-    }
-
-    .titulo-principal {
-        font-size: 2.5rem;
-    }
-
-    .subtitulo {
-        font-size: 1rem;
-    }
-
-    .slide2,
-    .slide3 {
-        height: 300px;
-    }
-
-    .slide1 {
-        height: 300px;
-    }
-
-    .carousel-caption {
-        padding: 10px;
-    }
-
-    .texto1 {
-        font-size: 1rem;
-    }
-
-    .segundo {
-        margin-top: 2rem;
-        padding: 1rem;
-    }
-
-    .imagen img {
-        width: 15rem;
-        height: 12rem;
-        margin-left: 2rem;
-        margin-top: 1rem;
-    }
-
-    .texto {
-        padding: 0.5rem;
-    }
-
-    .infoPaneles {
-        font-size: 0.9rem;
-        margin: 1rem;
-    }
-
-    .energiaSolar {
-        margin-top: 4rem;
-        padding: 1rem;
-    }
-
-    .queEs {
-        font-size: 2rem;
-    }
-
-    .energiaSolarInfo {
-        padding: 1rem;
-        font-size: 0.9rem;
-    }
-
-    .imgWhats {
-        width: 3rem;
-        height: 3rem;
-    }
 }
 
-@media (min-width: 767px) and (max-width: 1024px) {
-    .inicio {
-        height: 455vh;
-    }
-
-    .titulo {
-        position: static;
-        transform: none;
-        text-align: center;
-        z-index: 1;
-    }
-
+@media (max-width: 480px) {
     .titulo-principal {
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
-
     .subtitulo {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
-
-    .slide2,
-    .slide3 {
-        height: 450px;
+    .hero-image {
+        height: 250px;
     }
-
-    .slide1 {
-        height: 450px;
-    }
-
-    .carousel-caption {
-        padding: 15px;
-    }
-
-    .texto1 {
-        font-size: 1.2rem;
-    }
-
-    .segundo {
-        margin-top: 3rem;
-    }
-
-    .imagen img {
-        width: 20rem;
-        height: 16rem;
-        margin-left: 3rem;
-        margin-top: 1.5rem;
-    }
-
-    .texto {
-        padding: 1rem;
-    }
-
-    .infoPaneles {
-        font-size: 1.3rem;
-        margin: 1.5rem;
-    }
-
-    .energiaSolar {
-        margin-top: 6rem;
-    }
-
-    .queEs {
-        font-size: 3rem;
-    }
-
-    .energiaSolarInfo {
-        padding: 2rem;
-        font-size: 1.3rem;
-    }
-
-    .imgWhats {
-        width: 4rem;
-        height: 4rem;
+    .btn-cta {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
-
-  

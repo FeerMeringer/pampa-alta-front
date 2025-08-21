@@ -1,137 +1,90 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34495e; /* Color oscuro del footer */
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif; /* Usamos la misma fuente */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  background-color: #2b2b2b;
-  padding: 10px;
-}
-
-.navbar-logo {
-  margin-right: auto;
-}
-
-img {
-  width: 6rem;
-  height: 6rem;
+.navbar-logo img {
+    height: 50px; /* Tamaño del logo un poco más pequeño */
+    width: auto;
 }
 
 .navbar-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-item {
-  margin-right: 10px;
+    margin: 0 15px;
 }
 
 .navbar-item a {
-  color: #fff;
-  text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin: 0.9rem;
+    color: #ecf0f1; /* Color claro del texto */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-.navbar-company {
-  margin-left: auto;
-  color: #fff;
+.navbar-item a:hover {
+    color: #2ecc71; /* Color de acento al pasar el cursor */
 }
 
-/* Media query para ajustar el diseño en el rango de 320px a 435px de ancho */
+/* --- ESTILOS PARA MÓVILES (Menú hamburguesa) --- */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ecf0f1;
+}
 
-@media (min-width: 320px) and (max-width: 424px) {
-  @media (min-width: 320px) and (max-width: 424px) {
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
+@media (max-width: 768px) {
+    .main-navbar {
+        flex-direction: row;
+        justify-content: space-between;
     }
-  
-    .navbar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #2b2b2b;
-      padding: 10px;
-    }
-  
-    .navbar-logo {
-      margin-right: 0; /* Modificado */
-      margin-bottom: 10px; /* Añadido */
-    }
-  
-    img {
-      width: 4rem; /* Modificado */
-      height: 4rem; /* Modificado */
-    }
-  
+    
     .navbar-list {
-      flex-direction: column; /* Añadido */
-      align-items: center; /* Añadido */
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #34495e;
+        position: absolute;
+        top: 70px; /* Ajusta este valor si el logo es más grande */
+        left: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-  
+
+    .navbar-list.active {
+        display: flex;
+    }
+    
     .navbar-item {
-      margin-right: 0; /* Modificado */
-      margin-bottom: 10px; /* Añadido */
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-  
-    .navbar-item a {
-      margin: 0.5rem; /* Modificado */
+
+    .navbar-item:last-child {
+        border-bottom: none;
     }
-  
+
+    .menu-toggle {
+        display: block;
+    }
+    
     .navbar-company {
-      margin-left: 0; /* Modificado */
-      margin-top: 10px; /* Añadido */
+        display: none; /* Ocultamos el nombre de la compañía en móviles para simplificar */
     }
-  }
-  
 }
-@media (min-width: 425px) and (max-width: 769px) {
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  .navbar {
-    display: flex;
-    align-items: center;
-    background-color: #2b2b2b;
-    padding: 10px;
-  }
-
-  .navbar-logo {
-    margin-right: auto;
-  }
-
-  img {
-    width: 4rem;
-    height: 4rem;
-  }
-
-  .navbar-list {
-    flex-wrap: wrap;
-  }
-
-  .navbar-item {
-    margin-right: 10px;
-  }
-
-  .navbar-item a {
-    margin: 0.5rem;
-  }
-
-  .navbar-company {
-    margin-left: auto;
-  }
-}
-
