@@ -124,7 +124,18 @@ export default function Productos() {
     ],
     category: "inversores"
 },
-
+{
+  name: "Inversor Solar Off-Grid Growatt",
+  image: "https://i.postimg.cc/q720vXw9/inversor1.jpg", 
+  specs: [
+    "Paralelizable - modo SUB - hasta 450V y 6000W de paneles",
+    "Eficiencia del 93% en conversión",
+    "Modo SBU que mezcla red y paneles",
+    "Tensión de salida 230V (hogar/comercial)",
+    "Puerto USB para comunicación remota"
+  ],
+  category: "inversores"
+},
         //voltronic
         { 
     name: "Inversores Voltronic - Bajas Potencias", 
@@ -147,6 +158,7 @@ export default function Productos() {
     ],
     category: "inversores"
 },
+
 
         // ==================== BATERÍAS ====================
         // Pylontech
@@ -281,6 +293,20 @@ export default function Productos() {
         "Uso: Cobertura de piscinas",
         "Función: Captación calor solar",
         "Formato: Panel flotante"
+    ],
+    category: "accesorios"
+},
+ { 
+    name: "Proyector Solar", 
+    image: "https://i.postimg.cc/vB7mkvfY/proyectorsolar1.jpg", 
+    specs: [
+        "Potencia: 150 W (≈ 24 000 lúmenes, luz fría)",
+    "Batería LiFePO₄ 3.2 V 6 000 mAh",
+    "Autonomía: 10–15 horas tras carga completa",
+    "Tiempo de carga solar: 6–8 horas",
+    "Panel solar monocristalino incluido",
+    "Protección IP67; carcasa de aluminio resistente",
+    "Consulta por mas modelos"
     ],
     category: "accesorios"
 },
